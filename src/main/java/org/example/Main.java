@@ -45,7 +45,7 @@ public class Main {
         }
     }
 
-    protected static List<List<Object>> getValuesFromGoogleSheet() throws GeneralSecurityException, IOException {
+    private static List<List<Object>> getValuesFromGoogleSheet() throws GeneralSecurityException, IOException {
         String credentialsFilePath = "src/main/resources/credentials.json";
         System.setProperty("GOOGLE_APPLICATION_CREDENTIALS", credentialsFilePath);
 
@@ -70,7 +70,7 @@ public class Main {
         return values;
     }
 
-    protected static Map<String, Double> makeTheOptimalRoute(Map<String, String> sightsAndHoursToSpend, double freeHoursToSeeTheSights) {
+    private static Map<String, Double> makeTheOptimalRoute(Map<String, String> sightsAndHoursToSpend, double freeHoursToSeeTheSights) {
         Map<String, Double> optimalRoute = new LinkedHashMap<>();
 
         double totalTime = 0;
